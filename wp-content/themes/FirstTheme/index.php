@@ -14,13 +14,13 @@
  
 get_header(); ?>
 
-<!-- <?php get_header(); ?> -->
+<?php get_header(); ?>
 <div id="primary" class="content-area">
                <div id="content" class="site-content" role="main">
 					<?php if ( have_posts() ) : ?>
 					
-					<?php shape_content_nav( 'nav-above' ); ?>
-				     
+<!-- 					<?php shape_content_nav( 'nav-above' ); ?>
+ 				     
 				     <?php /* Start the Loop */ ?>
 				     <?php while ( have_posts() ) : the_post(); ?>
 				 
@@ -42,5 +42,6 @@ get_header(); ?>
 
 				<!-- #content .site-content -->
           <!-- #primary .content-area -->
-<?php get_sidebar(); ?>
+
+<!--<?php get_sidebar(); ?> -->
 <?php get_footer(); ?>

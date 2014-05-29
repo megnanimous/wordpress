@@ -49,6 +49,7 @@ echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
 </head>
  
 <body <?php body_class(); ?>>
+
 <div id="page" class="hfeed site">
      <header id="masthead" class="site-header" role="banner">
           <hgroup>
@@ -59,39 +60,19 @@ echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
 			<h1 class="assistive-text"><?php _e( 'Menu', 'shape' ); ?></h1>
 			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', '_s' ); ?>"><?php _e( 'Skip to content', 'shape' ); ?></a></div>
 	          <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-
-        
-          </nav><!-- .site-navigation .main-navigation -->
-
-
-
-          <div id="secondary" class="widget-area" role="complementary">
-    <?php do_action( 'before_sidebar' ); ?>
-    <?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
-        <aside id="search" class="widget widget_search">
-            <?php get_search_form(); ?>
-        </aside>
+      <hr class="navbar-line"></hr>
+			<aside id="search" class="widget widget_search">
+			            <?php get_search_form(); ?>
+			        </aside>
+      <hr class="navbar-line"></hr>
         <aside id="archives" class="widget">
             <h1 class="widget-title"><?php _e( 'Archives', 'shape' ); ?></h1>
             <ul>
                 <?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
             </ul>
         </aside>
- 
-        <aside id="meta" class="widget">
-            <h1 class="widget-title"><?php _e( 'Meta', 'shape' ); ?></h1>
-            <ul>
-                <?php wp_register(); ?>
-                <li><?php wp_loginout(); ?></li>
-                <?php wp_meta(); ?>
-            </ul>
-        </aside>
- 
-    <?php endif; // end sidebar widget area ?>
-</div><!-- #secondary .widget-area -->
-
-
-
+        
+          </nav><!-- .site-navigation .main-navigation -->
      </header><!-- #masthead .site-header -->
      <div id="main" class="site-main">
 
