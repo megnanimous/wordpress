@@ -94,4 +94,4 @@ get_header(); ?>
 </section><!-- #primary .content-area -->
  
 
-<?php get_footer(); ?>
+

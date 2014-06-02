@@ -391,18 +391,18 @@ a:active {
  
 #primary { /*Entire area encompassing the content, sets the width of the area for content*/
 float: left;
-margin-left:0px;
+margin-left:20px;
 margin-top: 300px;
-width: 1100px;
+width: 900px;
 }
 #content { /*Textarea for blog posts*/
 background-color:white;
 padding: 30px;
 padding-bottom:20px;
 max-width: 1000px;
-margin-top:-210px;
+margin-top:-255px;
 overflow: auto;
-border:0px solid black;
+
 }
 
 #secondary { /* Sidebar - Widget Area */
@@ -420,7 +420,7 @@ border: 0px dashed #ddd;
 .site-footer {
 clear: both;
 width: 100%;
-float:bottom;
+
 }
 
 /* =Site Header
@@ -457,6 +457,30 @@ float:bottom;
 	color: #696667;
 }
 
+/*Sticky Footer*/
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+  height: 50px; 
+}
+.site-footer {
+  background: #ffffff;
+}
+
 /* =Menu
 ----------------------------------------------- */
 
@@ -464,12 +488,14 @@ float:bottom;
     clear: both;
     display: inline-block;
     float: top;
-    width: 1000px;
-    padding: 1.5em;
-    padding-left: 0px;
+    width: 950px;
+    padding: 1em;
     background-color: white;
     margin-top:150px;
-    margin-left: 30px;
+    margin-left: 40px;
+    border-left: 2px dashed #CCCCCC;
+    border-right: 2px dashed #CCCCCC;
+
 
 }
 .main-navigation:after {
@@ -481,8 +507,8 @@ float:bottom;
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-left: 2em;
+	padding-right: 0em;
 
 }
 /*Main navigation link options*/
@@ -496,7 +522,7 @@ float:bottom;
     margin-right: 1.5em;
     text-decoration: none;
     margin-bottom: 4px;
-    text-align: left;
+    text-align: center;
   
 }
 

@@ -30,4 +30,3 @@ get_header(); ?>
             </div><!-- #content .site-content -->
         </div><!-- #primary .content-area -->
  
-<?php get_footer(); ?>
